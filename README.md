@@ -43,7 +43,7 @@ The goal is to ensure functionality, reliability, and system stability through s
 ### 1️⃣ Automated UI Testing (Para Bank)  
 1. Clone the repository:  
    `sh
-   git clone https://github.com/YOUR-USERNAME/para-bank-restful-booker-testing.git
+   git clone https://github.com/GehadEbrahim/para-bank-restful-booker-testing.git
 
 2. Navigate to the automation folder:
 
@@ -72,6 +72,9 @@ All test execution reports will be available in the /reports/ folder.
 Log files are stored in the /logs/ directory for debugging.
 
 
-🤝 Contributing
-
-If you'd like to contribute to improving the test cases or adding new features, feel free to create a pull request!
+🤝 Contributors
+-   Gehad Ebrahim
+-   Aya Allah Emad
+-   Rewan Waheed
+-   Nada Gamal
+-   Menna Hassan
