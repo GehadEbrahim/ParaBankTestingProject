@@ -38,16 +38,16 @@ The goal is to ensure functionality, reliability, and system stability through s
 
 ## ✅ Test Scenarios  
 ### Para Bank (Web UI)
-- 🔹 User Login & Logout  
-- 🔹 Account Creation & Management  
-- 🔹 Fund Transfers & Transactions  
-- 🔹 Error Handling & Validations  
+-  User Login & Logout  
+-  Account Creation & Management  
+-  Fund Transfers & Transactions  
+-  Error Handling & Validations  
 
 ### Restful Booker (API)
-- 🔹 Create a new booking (POST /booking)  
-- 🔹 Retrieve booking details (GET /booking/{id})  
-- 🔹 Update booking (PUT /booking/{id})  
-- 🔹 Delete booking (DELETE /booking/{id})  
+-  Create a new booking (POST /booking)  
+-  Retrieve booking details (GET /booking/{id})  
+-  Update booking (PUT /booking/{id})  
+-  Delete booking (DELETE /booking/{id})  
 
 ## 🚀 How to Run the Tests  
 ### 1️⃣ Automated UI Testing (Para Bank)  
