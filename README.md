@@ -9,7 +9,6 @@ The goal is to ensure functionality, reliability, and system stability through s
 ## 🛠 Tools & Technologies  
 - Selenium WebDriver + TestNG/JUnit → UI testing for Para Bank  
 - RestAssured / Postman → API testing for Restful Booker  
-- Maven / Python (PyTest) → Dependency and test management  
 - Extent Reports / Newman → Test reporting  
 
 ## 📂 Project Structure
