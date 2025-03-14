@@ -9,35 +9,44 @@ The goal is to ensure functionality, reliability, and system stability through s
 ## 🛠 Tools & Technologies  
 - Selenium WebDriver + TestNG/JUnit → UI testing for Para Bank  
 - RestAssured / Postman → API testing for Restful Booker  
-- Maven / Python (PyTest) → Dependency and test management  
 - Extent Reports / Newman → Test reporting  
 
 ## 📂 Project Structure
 
 /para-bank-restful-booker-testing
+
 │── /manual-testing/           # Manual test cases
+
 │── /automation/               # Automated testing scripts
+
 │   │── /para-bank/            # Selenium-based UI tests
+
 │   │── /restful-booker/       # API tests using RestAssured/Postman
+
 │── /reports/                  # Test execution reports
+
 │── /logs/                     # Execution logs
+
 │── README.md                  # Project documentation
+
 │── .gitignore                 # Ignore unnecessary files
+
 │── requirements.txt           # Dependencies for Python-based tests
+
 │── pom.xml                    # Maven dependencies for Java-based tests
 
 ## ✅ Test Scenarios  
 ### Para Bank (Web UI)
-- 🔹 User Login & Logout  
-- 🔹 Account Creation & Management  
-- 🔹 Fund Transfers & Transactions  
-- 🔹 Error Handling & Validations  
+-  User Login & Logout  
+-  Account Creation & Management  
+-  Fund Transfers & Transactions  
+-  Error Handling & Validations  
 
 ### Restful Booker (API)
-- 🔹 Create a new booking (POST /booking)  
-- 🔹 Retrieve booking details (GET /booking/{id})  
-- 🔹 Update booking (PUT /booking/{id})  
-- 🔹 Delete booking (DELETE /booking/{id})  
+-  Create a new booking (POST /booking)  
+-  Retrieve booking details (GET /booking/{id})  
+-  Update booking (PUT /booking/{id})  
+-  Delete booking (DELETE /booking/{id})  
 
 ## 🚀 How to Run the Tests  
 ### 1️⃣ Automated UI Testing (Para Bank)  
