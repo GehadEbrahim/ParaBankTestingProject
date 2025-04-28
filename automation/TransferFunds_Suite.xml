@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite parallel="false" name="TransferFunds_Suite">
+
+  <test name="TransferFunds_happyTestCases">
+    <classes>
+      <class name="tests.TransferFunds_happyScenarioTest"/>
+    </classes>
+  </test> <!-- Test -->
+  <test name="TransferFunds_negativeTestCases">
+    <classes>
+      <class name="tests.TransferFunds_negativSecenarioTest"/>
+    </classes>
+  </test> <!-- Test -->
+  
+</suite> <!-- Suite -->

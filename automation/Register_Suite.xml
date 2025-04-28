@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite parallel="false" name="Register_Suite">
+
+ <test name="Register_happyTestCases">
+    <classes>
+      <class name="tests.RegisterTest"/>
+    </classes>
+  </test> <!-- Test --> <!--Works alone but in the suite , it fails IDK why-->
+  <test name="Register_negativeTestCases">
+    <classes>
+      <class name="tests.Register_negativeScenario"/>
+    </classes>
+ </test> <!-- Test -->
+</suite> <!-- Suite -->

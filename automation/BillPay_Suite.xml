@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite parallel="false" name="BillPay_Suite">
+
+  <test name="BillPay_happyTestCases">
+    <classes>
+      <class name="tests.BillPay_happyScenario"/>
+    </classes>
+  </test> <!-- Test -->
+  <test name="BillPay_negativeTestCases">
+    <classes>
+      <class name="tests.BillPay_negativeScenario"/>
+    </classes>
+ </test> <!-- Test -->
+ 
+</suite> <!-- Suite -->
