@@ -16,19 +16,16 @@ The goal is to ensure functionality, reliability, and system stability through s
 /para-bank-restful-booker-testing
 
 │── /manual-testing/                              # Manual test cases
-
+│── /Test Cases _ ParaBank/                       # The Test Cases
 │── /automation/                                  # Automated testing scripts
-
-│   │── /para-bank/                               # Selenium-based UI tests
-
-│   │── /restful-booker/                          # API tests using RestAssured/Postman
-
+│   │── /src/                                    
+│   │──|── /main/   
+│   │──|──│──/pges/                               # Selenium-based UI tests
+│   │──|── /test/  
+│   │──|──│── /tests/                             # TestNG tests
 │── /Bug Tracker/                                 # Test execution reports
-
 │── README.md                                     # Project documentation
-
 │── .gitignore                                    # Ignore unnecessary files
-
 │── Requirements for para & restful.txt           # Contains fancional , non-functional requirements , user storis and use cases
 
 ## ✅ Test Scenarios  
