@@ -12,15 +12,4 @@
       </class> <!-- tests.Login_Test -->
     </classes>
   </test> <!-- Login_happyTestCases(failed) -->
-  <test thread-count="5" name="Login_negativeTestCases(failed)">
-    <classes>
-      <class name="tests.Login_negativeScenario">
-        <methods>
-          <include name="successfulLoginTest"/>
-          <include name="closeBrowser"/>
-          <include name="openBrowser"/>
-        </methods>
-      </class> <!-- tests.Login_negativeScenario -->
-    </classes>
-  </test> <!-- Login_negativeTestCases(failed) -->
 </suite> <!-- Failed suite [RegisterTest] -->

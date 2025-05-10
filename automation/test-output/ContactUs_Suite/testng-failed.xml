@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [ContactUs_Suite]">
+  <test thread-count="5" name="ContactUs_Test(failed)">
+    <classes>
+      <class name="tests.ContactUs_Test">
+        <methods>
+          <include name="testSubmitContactForm"/>
+          <include name="closeBrowser"/>
+          <include name="openBrowser"/>
+        </methods>
+      </class> <!-- tests.ContactUs_Test -->
+    </classes>
+  </test> <!-- ContactUs_Test(failed) -->
+</suite> <!-- Failed suite [ContactUs_Suite] -->

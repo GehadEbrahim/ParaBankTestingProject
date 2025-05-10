@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite parallel="false" name="FindTransactions_Suite">
+
+  <test name="FindTransactions_happyTestCases">
+    <classes>
+      <class name="tests.FindTransactions_happyScenario"/>
+    </classes>
+  </test> <!-- Test -->
+  <test name="FindTransactions_negativeTestCases">
+    <classes>
+      <class name="tests.FindTransactions_negativeScenario"/>
+    </classes>
+ </test> <!-- Test -->
+ 
+</suite> <!-- Suite -->

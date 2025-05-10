@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [ForgetLoginInfo_Suite]">
+  <test thread-count="5" name="ForgetLoginInfo_negativeTestCases(failed)">
+    <classes>
+      <class name="tests.ForgetLoginInfo_negativeTest">
+        <methods>
+          <include name="closeBrowser"/>
+          <include name="testFailedForgetLoginInfo"/>
+          <include name="openBrowser"/>
+        </methods>
+      </class> <!-- tests.ForgetLoginInfo_negativeTest -->
+    </classes>
+  </test> <!-- ForgetLoginInfo_negativeTestCases(failed) -->
+</suite> <!-- Failed suite [ForgetLoginInfo_Suite] -->

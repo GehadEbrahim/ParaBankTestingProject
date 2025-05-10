@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite parallel="false" name="OpenNewAcc_Suite">
+
+  <test name="OpenNewAcc_happyTestCases">
+    <classes>
+      <class name="tests.OpenNewAcc_HappyScenario"/>
+    </classes>
+  </test> <!-- Test -->
+  
+</suite> <!-- Suite -->

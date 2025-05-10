@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite parallel="false" name="ForgetLoginInfo_Suite">
+
+  <test name="ForgetLoginInfo_happyTestCases">
+    <classes>
+      <class name="tests.ForgetLoginInfo_HappyTest"/>
+    </classes>
+  </test> <!-- Test -->
+  <test name="ForgetLoginInfo_negativeTestCases">
+    <classes>
+      <class name="tests.ForgetLoginInfo_negativeTest"/>
+    </classes>
+ </test> <!-- Test -->
+ 
+</suite> <!-- Suite -->
