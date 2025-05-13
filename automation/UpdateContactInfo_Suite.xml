@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite parallel="false" name="UpdateContactInfo_Suite">
+  <test name="UpdateContactInfo_HappyTestCases">
+    <classes>
+      <class name="tests.UpdateContactInfo_HappyScenario"/>
+    </classes>
+  </test> <!-- Test -->
+  <test name="UpdateContactInfo_NegativeScenario">
+    <classes>
+      <class name="tests.UpdateContactInfo_NegativeScenario"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

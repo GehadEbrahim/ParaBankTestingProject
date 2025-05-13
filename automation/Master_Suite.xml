@@ -10,5 +10,6 @@
 		<suite-file path="BillPay_Suite.xml"/>
 		<suite-file path="ContactUs_Suite.xml"/>
 		<suite-file path="ForgetLoginInfo_Suite.xml"/>
+		<suite-file path="UpdateContactInfo_Suite.xml"/>
 	</suite-files>
 </suite>

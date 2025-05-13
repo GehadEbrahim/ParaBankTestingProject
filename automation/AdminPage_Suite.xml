@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite parallel="false" name="BillPay_Suite">
+  <test name="AdminPage_TestCases">
+    <classes>
+      <class name="tests.AdminPageTest"/>
+    </classes>
+ </test> <!-- Test -->
+ 
+</suite> <!-- Suite -->
