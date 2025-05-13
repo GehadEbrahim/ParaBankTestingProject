@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Master_Sutie" verbose="1">
+	<suite-files>
+		<suite-file path="Register_Suite.xml"/>
+		<suite-file path="Login_Suite.xml"/>
+		<suite-file path="OpenNewAcc_Suite.xml"/>
+		<suite-file path="FindTransactions_Suite.xml"/>
+		<suite-file path="TransferFunds_Suite.xml"/>
+		<suite-file path="BillPay_Suite.xml"/>
+		<suite-file path="ContactUs_Suite.xml"/>
+		<suite-file path="ForgetLoginInfo_Suite.xml"/>
+	</suite-files>
+</suite>

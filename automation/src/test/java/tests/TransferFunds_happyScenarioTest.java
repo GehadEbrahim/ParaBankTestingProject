@@ -10,22 +10,12 @@ import pages.Register_Page;
 import pages.TransferFunds_Page;
 
 public class TransferFunds_happyScenarioTest extends TestBase {
-	//Register_Page registerPage = new Register_Page(driver);
-	Login_Page loginPage = new Login_Page(driver);
-	TransferFunds_Page transferFunds = new TransferFunds_Page(driver);
-    
+    Login_Page loginPage = new Login_Page(driver);
+    TransferFunds_Page transferFunds = new TransferFunds_Page(driver);
+
     @Test (priority = 1)
     public void test_OpenNewAccount() throws InterruptedException {
-//    		  registerPage.registerCustomer("Menna",
-//    	            "Helmy",
-//    	            "123 Main St",
-//    	            "Anytown",
-//    	            "CA",
-//    	            "90210",
-//    	            "555-123-4567",
-//    	            "123-45-6789",
-//    	            "Gehad",
-//    	            "0");
+//
         loginPage.login("Gehad", "0");
         Thread.sleep(3000);
         transferFunds.openTransferFundsPage();
@@ -36,7 +26,7 @@ public class TransferFunds_happyScenarioTest extends TestBase {
         transferFunds.selectToAccountID();
         transferFunds.transferSubmit();
         Thread.sleep(1000);
-        
+
         Assert.assertEquals("Transfer Complete!", transferFunds.transferCompleteMessage.getText());
-    }	
+    }
 }

@@ -6,16 +6,16 @@ import org.openqa.selenium.support.FindBy;
 
 public class ContactUs_Page extends PageBase {
 
-	public ContactUs_Page(WebDriver driver) {
-		super(driver);
-	}
-	
-	@FindBy(name = "name")
+    public ContactUs_Page(WebDriver driver) {
+        super(driver);
+    }
+
+    @FindBy(name = "name")
     WebElement nameField;
 
     @FindBy(name = "email")
     WebElement emailField;
-    
+
     @FindBy(name = "phone")
     WebElement phoneField;
 
@@ -24,13 +24,13 @@ public class ContactUs_Page extends PageBase {
 
     @FindBy(css = "input[type='submit']")
     WebElement submitButton;
-    
+
     @FindBy(css = "h1.title")
     WebElement pageTitle;
 
     @FindBy(css = "#rightPanel p:nth-child(2)")
     WebElement thankYouMessage;
-    
+
     @FindBy(css = "#rightPanel p:nth-child(3)")
     WebElement confirmationMessage;
 
@@ -52,8 +52,8 @@ public class ContactUs_Page extends PageBase {
     public String getConfirmationMessage() {
         return confirmationMessage.getText();
     }
-    
-    
+
+
     public String getPageTitle() {
         return pageTitle.getText();
     }

@@ -36,13 +36,13 @@ public class ForgetLoginPage extends PageBase {
 
     @FindBy(xpath = "//input[@value='Find My Login Info']")
     WebElement findMyLoginInfoButton;
-    
+
     @FindBy(xpath = "//h1[@class='title']")
-	public
+    public
     WebElement errorTitle;
 
     @FindBy(xpath = "//p[@class='error']")
-	public
+    public
     WebElement errorMessage;
 
     public void fillCustomerLookupForm(String firstName, String lastName, String address,
@@ -63,11 +63,11 @@ public class ForgetLoginPage extends PageBase {
     public String getPageTitle() {
         return pageTitle.getText();
     }
-    
+
     public String getLoginTitle() {
         return errorTitle.getText();
     }
     public String getErrorMesageForgetInfo() {
-    	return errorMessage.getText();
+        return errorMessage.getText();
     }
 }
