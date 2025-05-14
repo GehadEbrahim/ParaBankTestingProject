@@ -5,31 +5,37 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.*;
 import pages.AdminPage;
 
-public class AdminPageTest extends TestBase{
+public class AdminPageTest{
 
     WebDriver driver;
-    AdminPage adminPage = new AdminPage(driver);
+    AdminPage adminPage;
+
+    @BeforeClass
+    public void setUp() {
+        System.setProperty("webdriver.chrome.driver", "C:\\Drivers\\chromedriver.exe");
+        driver = new ChromeDriver();
+        driver.manage().window().maximize();
+        driver.get("http://parabank.parasoft.com/ParaBankAdminPanel/admin.htm");
+        adminPage = new AdminPage(driver);
+    }
 
     @Test
-    public void testAdminSettingsSubmission() throws InterruptedException {
-    	Thread.sleep(2000);
-
-    	adminPage.OpenAdminPage();
-    	Thread.sleep(2000);
-        adminPage.setDatabase("jdbc:mysql://parabank.parasoft.com/parabank", "admin", "admin123");
-
-
-        adminPage.enableJmsService(true, "tcp://parabank.parasoft.com:61616");
-
-
+    public void testAdminSettingsSubmission() {
         adminPage.selectDataAccessMode("REST_JSON");
 
+        adminPage.setWebServiceEndpoints(
+                "http://parabank.parasoft.com/soap",
+                "http://parabank.parasoft.com/rest",
+                "http://parabank.parasoft.com/loan"
+        );
 
-        adminPage.setWebServiceEndpoint("http://parabank.parasoft.com/api");
-
-
-        adminPage.setApplicationSettings("10000", "500");
-
+        adminPage.setApplicationSettings(
+                "10000",
+                "500",
+                "Web Service",
+                "Available Funds",
+                "20"
+        );
 
         adminPage.submitSettings();
     }

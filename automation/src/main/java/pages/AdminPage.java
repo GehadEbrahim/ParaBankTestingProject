@@ -2,89 +2,69 @@ package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.Select;
 
-public class AdminPage extends PageBase{
-    
-    public AdminPage(WebDriver driver) {
-		super(driver);
-		// TODO Auto-generated constructor stub
-	}
-
-    @FindBy(css = "#headerPanel > ul.leftmenu > li:nth-child(6) > a")
-    WebElement OpenAdminPageBtn;
-	private By databaseUrlField = By.name("dbUrl");
-    private By databaseUserField = By.name("dbUser");
-    private By databasePasswordField = By.name("dbPassword");
-
-
-    private By jmsEnableCheckbox = By.name("enableJms");
-    private By jmsBrokerUrlField = By.name("jmsBrokerUrl");
-
+public class AdminPage {
+    private WebDriver driver;
 
     private By restJsonRadio = By.xpath("//input[@name='dataMode' and @value='REST_JSON']");
-    private By soapXmlRadio = By.xpath("//input[@name='dataMode' and @value='SOAP_XML']");
+    private By restXmlRadio = By.xpath("//input[@name='dataMode' and @value='SOAP_XML']");
+    private By soapRadio = By.xpath("//input[@name='dataMode' and @value='SOAP']");
+    private By jdbcRadio = By.xpath("//input[@name='dataMode' and @value='JDBC']");
 
+    private By soapEndpointField = By.name("soapEndpoint");
+    private By restEndpointField = By.name("restEndpoint");
+    private By loanProcessorEndpointField = By.name("loanProcessorEndpoint");
 
-    private By webServiceEndpointField = By.name("webServiceUrl");
-
-    private By initBalanceField = By.name("initBalance");
-    private By minBalanceField = By.name("minBalance");
+    private By initBalanceField = By.name("initialBalance");
+    private By minBalanceField = By.name("minimumBalance");
+    private By loanProviderDropdown = By.name("loanProvider");
+    private By loanProcessorDropdown = By.name("loanProcessor");
+    private By thresholdField = By.name("loanThreshold");
 
     private By submitButton = By.xpath("//input[@type='submit']");
 
-
-    public void OpenAdminPage() {
-    	OpenAdminPageBtn.click();
+    public AdminPage(WebDriver driver) {
+        this.driver = driver;
     }
-	public void setDatabase(String url, String user, String password) {
-        driver.findElement(databaseUrlField).clear();
-        driver.findElement(databaseUrlField).sendKeys(url);
-        driver.findElement(databaseUserField).clear();
-        driver.findElement(databaseUserField).sendKeys(user);
-        driver.findElement(databasePasswordField).clear();
-        driver.findElement(databasePasswordField).sendKeys(password);
-    }
-
-
-    public void enableJmsService(boolean enable, String brokerUrl) {
-        if (enable) {
-            if (!driver.findElement(jmsEnableCheckbox).isSelected()) {
-                driver.findElement(jmsEnableCheckbox).click();
-            }
-            driver.findElement(jmsBrokerUrlField).clear();
-            driver.findElement(jmsBrokerUrlField).sendKeys(brokerUrl);
-        } else {
-            if (driver.findElement(jmsEnableCheckbox).isSelected()) {
-                driver.findElement(jmsEnableCheckbox).click();
-            }
-        }
-    }
-
 
     public void selectDataAccessMode(String mode) {
-        if (mode.equalsIgnoreCase("REST_JSON")) {
-            driver.findElement(restJsonRadio).click();
-        } else if (mode.equalsIgnoreCase("SOAP_XML")) {
-            driver.findElement(soapXmlRadio).click();
+        switch (mode.toUpperCase()) {
+            case "SOAP":
+                driver.findElement(soapRadio).click();
+                break;
+            case "REST_XML":
+                driver.findElement(restXmlRadio).click();
+                break;
+            case "REST_JSON":
+                driver.findElement(restJsonRadio).click();
+                break;
+            case "JDBC":
+                driver.findElement(jdbcRadio).click();
+                break;
         }
     }
 
-
-    public void setWebServiceEndpoint(String url) {
-        driver.findElement(webServiceEndpointField).clear();
-        driver.findElement(webServiceEndpointField).sendKeys(url);
+    public void setWebServiceEndpoints(String soapUrl, String restUrl, String loanProcessorUrl) {
+        driver.findElement(soapEndpointField).clear();
+        driver.findElement(soapEndpointField).sendKeys(soapUrl);
+        driver.findElement(restEndpointField).clear();
+        driver.findElement(restEndpointField).sendKeys(restUrl);
+        driver.findElement(loanProcessorEndpointField).clear();
+        driver.findElement(loanProcessorEndpointField).sendKeys(loanProcessorUrl);
     }
 
-
-    public void setApplicationSettings(String initBalance, String minBalance) {
+    public void setApplicationSettings(String initBalance, String minBalance, String loanProvider,
+                                       String loanProcessor, String threshold) {
         driver.findElement(initBalanceField).clear();
         driver.findElement(initBalanceField).sendKeys(initBalance);
         driver.findElement(minBalanceField).clear();
         driver.findElement(minBalanceField).sendKeys(minBalance);
+        new Select(driver.findElement(loanProviderDropdown)).selectByVisibleText(loanProvider);
+        new Select(driver.findElement(loanProcessorDropdown)).selectByVisibleText(loanProcessor);
+        driver.findElement(thresholdField).clear();
+        driver.findElement(thresholdField).sendKeys(threshold);
     }
-
 
     public void submitSettings() {
         driver.findElement(submitButton).click();
