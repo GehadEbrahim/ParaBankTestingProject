@@ -5,7 +5,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.*;
 import pages.AdminPage;
 
-public class AdminPageTest{
+public class AdminPageTest {
 
     WebDriver driver;
     AdminPage adminPage;

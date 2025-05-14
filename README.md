@@ -1,32 +1,34 @@
-# Para Bank & Restful Booker Testing Project  
+# Para Bank Testing Project  
 
 ## 📌 Overview  
-This project includes manual and automated testing for Para Bank (a web banking application) and Restful Booker (a hotel booking API).  
+This project includes manual and automated testing for Para Bank (a web banking application) 
 - Para Bank → Web UI testing using Selenium WebDriver.  
-- Restful Booker → API testing using RestAssured/Postman.  
 The goal is to ensure functionality, reliability, and system stability through structured test cases and scripts.  
 
 ## 🛠 Tools & Technologies  
-- Selenium WebDriver + TestNG/JUnit → UI testing for Para Bank  
-- RestAssured / Postman → API testing for Restful Booker  
+- Selenium WebDriver + TestNG → UI testing for Para Bank
+  
 - Extent Reports / Newman → Test reporting  
 
 ## 📂 Project Structure
 
-/para-bank-restful-booker-testing
+/ParaBankTestingProject
 
 │── /manual-testing/                              # Manual test cases
 │── /Test Cases _ ParaBank/                       # The Test Cases
 │── /automation/                                  # Automated testing scripts
 │   │── /src/                                    
 │   │──|── /main/   
-│   │──|──│──/pges/                               # Selenium-based UI tests
+│   │──|──│──/pages/                               # Selenium-based UI tests
+│   │──|──│──/data/
+            #data provider
+│   │──|──│──/properties/
 │   │──|── /test/  
 │   │──|──│── /tests/                             # TestNG tests
 │── /Bug Tracker/                                 # Test execution reports
 │── README.md                                     # Project documentation
 │── .gitignore                                    # Ignore unnecessary files
-│── Requirements for para & restful.txt           # Contains fancional , non-functional requirements , user storis and use cases
+│── Requirements for parabank.txt           # Contains fancional , non-functional requirements , user storis and use cases
 
 ## ✅ Test Scenarios  
 ### Para Bank (Web UI)
@@ -35,21 +37,15 @@ The goal is to ensure functionality, reliability, and system stability through s
 -  Fund Transfers & Transactions  
 -  Error Handling & Validations  
 
-### Restful Booker (API)
--  Create a new booking (POST /booking)  
--  Retrieve booking details (GET /booking/{id})  
--  Update booking (PUT /booking/{id})  
--  Delete booking (DELETE /booking/{id})  
+## 🚀 How to Run the Tests:
 
-## 🚀 How to Run the Tests  
-### 1️⃣ Automated UI Testing (Para Bank)  
 1. Clone the repository:  
    `sh
-   git clone https://github.com/GehadEbrahim/para-bank-restful-booker-testing.git
+   git clone https://github.com/GehadEbrahim/ParaBankTestingProject
 
 2. Navigate to the automation folder:
 
-cd para-bank-restful-booker-testing/automation/para-bank
+cd ParaBankTestingProject/automation/src
 
 
 3. Run the test suite using Maven:
@@ -58,20 +54,9 @@ mvn test
 
 
 
-2️⃣ API Testing (Restful Booker)
-
-Using Postman: Import the provided collection and run the test cases.
-
-Using RestAssured (Java): Execute the test scripts with:
-
-mvn test -Dtest=RestfulBookerTests
-
-
-📊 Reporting & Logs
+📊 Reporting
 
 All test execution reports will be available in the /reports/ folder.
-
-Log files are stored in the /logs/ directory for debugging.
 
 
 🤝 Contributors
